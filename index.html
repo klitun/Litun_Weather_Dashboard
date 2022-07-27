@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Header/Title -->
+    <header class="row justify-content-center text-white display-3 headerWeather">Weather Dashboard</header>
+
+    <!-- Div container for search field, button-->
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-12 col-md-3 col-xl-2">
+                <h4 class="mt-2">Enter City:</h4>
+                <input type="text" class="form-control mb-3" id="searchCity" placeholder="San Francisco...">
+                <button class="btn btn-primary search" id="searchWeather">Search</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Previous searched cities appear here -->
+
+    <ul class="list-group searchHistory"></ul>
+
+    <!-- Current searched city info  -->
+
+    <div class="containerWeather col-lg-9">
+        <div id="todayForecast"></div>
+
+
+    <!-- Five day forecast -->
+
+        <div id="fiveDays" class="card-deck"></div>
+
+
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./Assets/js/script.js"></script>
+</body>
+
+</html>
