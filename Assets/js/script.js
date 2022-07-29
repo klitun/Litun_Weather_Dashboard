@@ -26,7 +26,7 @@ $.ajax({
     method: "GET"
 }).then(function(res){
     console.log(res);     
-    // showtodayWeather(); 
+    showtodayWeather(res); 
 
 });
 }
@@ -34,13 +34,14 @@ $.ajax({
 
 // For appending information of today's forecast to html card id todayForecast
 
-// function showtodayWeather(){
-// var card = $("<div>").addClass("card");
-// var cardInfo = $("<div>").addClass("card-body");
-// cardInfo.append(title, temp, humid, wind);
-// card.append(cardInfo);
-// $("#todayForecast").append(card);
-// }
+function showtodayWeather(res){
+var card = $("<div>").addClass("card");
+var cardInfo = $("<div>").addClass("card-body");
+var temp =res.current.temp
+cardInfo.append(temp);
+card.append(cardInfo);
+$("#todayForecast").append(card);
+}
 
 
    
